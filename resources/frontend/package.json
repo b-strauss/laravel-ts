@@ -1,0 +1,76 @@
+{
+    "private": true,
+    "scripts": {
+        "hot": "cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server --progress --hide-modules --hot --config=webpack.hot.config.js",
+        "dev": "cross-env NODE_ENV=development node_modules/.bin/webpack --progress --hide-modules --config=webpack.dev.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --progress --hide-modules --config=webpack.dev.config.js",
+        "prod": "cross-env NODE_ENV=production node_modules/.bin/webpack --hide-modules --config=webpack.prod.config.js",
+        "lint": "node_modules/.bin/eslint ./src/**/*.{js,vue}",
+        "lint-fix": "node_modules/.bin/eslint ./src/**/*.{js,vue} --fix"
+    },
+    "browserslist": [
+        "> 2%",
+        "ie 11"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "./src/**/*.{js,vue}": [
+            "node_modules/.bin/eslint"
+        ]
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.8.7",
+        "@babel/runtime-corejs3": "^7.8.7",
+        "@mdi/font": "^4.9.95",
+        "gsap": "^3.2.4",
+        "vue": "^2.6.11",
+        "vue-i18n": "^8.15.4",
+        "vue-router": "^3.1.6",
+        "vuex": "^3.1.2",
+        "vuex-router-sync": "^5.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+        "@babel/plugin-proposal-numeric-separator": "^7.8.3",
+        "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+        "@babel/plugin-transform-runtime": "^7.8.3",
+        "@babel/preset-env": "^7.8.7",
+        "babel-eslint": "^10.0.3",
+        "babel-loader": "^8.0.6",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^5.1.1",
+        "cross-env": "^7.0.0",
+        "css-loader": "^3.4.2",
+        "cssnano": "^4.1.10",
+        "eslint": "^6.8.0",
+        "eslint-plugin-vue": "^6.1.2",
+        "file-loader": "^5.0.2",
+        "html-loader": "^0.5.5",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.5",
+        "node-sass": "^4.13.1",
+        "normalize.css": "^8.0.1",
+        "on-build-webpack": "^0.1.0",
+        "postcss-loader": "^3.0.0",
+        "postcss-preset-env": "^6.7.0",
+        "pug": "^2.0.4",
+        "pug-plain-loader": "^1.0.0",
+        "sass": "^1.25.0",
+        "sass-loader": "^8.0.2",
+        "style-loader": "^1.1.3",
+        "vue-loader": "^15.8.3",
+        "vue-template-compiler": "^2.6.11",
+        "webpack": "^4.41.5",
+        "webpack-bundle-analyzer": "^3.6.0",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.10.1",
+        "webpack-manifest-plugin": "^2.2.0",
+        "webpack-visualizer-plugin": "^0.1.11",
+        "yargs-parser": "^16.1.0"
+    }
+}
