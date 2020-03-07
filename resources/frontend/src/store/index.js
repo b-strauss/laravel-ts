@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import createVuexLogger from 'vuex/dist/logger';
 
+import config from './module/config';
+
 Vue.use(Vuex);
 
 const plugins = [];
@@ -17,5 +19,7 @@ if (__BUILD_IS_DEVELOPMENT__) {
 
 export default new Vuex.Store({
   plugins,
-  modules: {},
+  modules: {
+    config,
+  },
 });

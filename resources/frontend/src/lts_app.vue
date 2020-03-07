@@ -1,6 +1,9 @@
 <template lang="pug">
   .lts-app
-    h1 Hello World
+    h1
+      | Hello World
+    p
+      | {{getUnitName}}
 </template>
 
 <style lang="sass" scoped>
@@ -9,12 +12,18 @@
 </style>
 
 <script>
+import {mapGetters} from 'vuex';
+
 export default {
   name: 'LtsApp',
   components: {},
   props: {},
   data: () => ({}),
-  computed: {},
+  computed: {
+    ...mapGetters('config', [
+      'getUnitName',
+    ]),
+  },
   watch: {},
   mounted () {
   },

@@ -44,7 +44,7 @@ module.exports = {
     publicPath: `${serverAddress}/frontend/`,
   },
   resolve: {
-    extensions: ['.js', '.vue'],
+    extensions: ['.js', '.ts', '.vue'],
     symlinks: false,
   },
   plugins: [
@@ -110,6 +110,21 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
+      },
+      {
+        test: /\.ts$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              // https://github.com/TypeStrong/ts-loader#faster-builds
+              transpileOnly: false,
+            },
+          },
+        ],
       },
       {
         test: /\.js$/,

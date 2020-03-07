@@ -15,7 +15,7 @@ module.exports = {
       {
         absoluteRuntime: true,
         corejs: 3,
-        version: '^7.8.3',
+        version: '^7.8.7',
       },
     ],
     '@babel/plugin-proposal-optional-chaining',
