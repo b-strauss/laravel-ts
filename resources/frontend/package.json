@@ -72,6 +72,6 @@
         "webpack-dev-server": "^3.10.1",
         "webpack-manifest-plugin": "^2.2.0",
         "webpack-visualizer-plugin": "^0.1.11",
-        "yargs-parser": "^16.1.0"
+        "yargs-parser": "^18.1.2"
     }
 }
